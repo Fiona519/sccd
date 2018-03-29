@@ -1,0 +1,58 @@
+[
+		{
+		    "tid": "tea1",
+		    "team": "Customer Incident Agency",
+		    "itTicket": 72,
+		    "customerTicket": 8,
+		    "quater": "2016-Q1"
+		},
+		{
+		    "tid": "tea1",
+		    "team": "Customer Incident Agency",
+		    "itTicket": 85,
+		    "customerTicket": 26,
+		    "quater": "2016-Q2"
+		},
+		{
+		    "tid": "tea1",
+		    "team": "Customer Incident Agency",
+		    "itTicket": 127,
+		    "customerTicket": 13,
+		    "quater": "2016-Q3"
+		},
+		{
+		    "tid": "tea1",
+		    "team": "Customer Incident Agency",
+		    "itTicket": 108,
+		    "customerTicket": 46,
+		    "quater": "2016-Q4"
+		},
+		{
+		    "tid": "tea1",
+		    "team": "Customer Incident Agency",
+		    "itTicket": 60,
+		    "customerTicket": 17,
+		    "quater": "2017-Q1"
+		},
+		{
+		    "tid": "tea1",
+		    "team": "Customer Incident Agency",
+		    "itTicket": 15,
+		    "customerTicket": 16,
+		    "quater": "2017-Q2"
+		},
+		{
+		    "tid": "tea1",
+		    "team": "Customer Incident Agency",
+		    "itTicket": 8,
+		    "customerTicket": 24,
+		    "quater": "2017-Q3"
+		},
+		{
+		    "tid": "tea1",
+		    "team": "Customer Incident Agency",
+		    "itTicket": 15,
+		    "customerTicket": 10,
+		    "quater": "2017-Q4"
+		}
+	]

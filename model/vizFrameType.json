@@ -1,0 +1,10 @@
+[
+	{
+		"typeId": "stacked_bar",
+		"name": "Quantity"
+	},
+	{
+		"typeId": "100_stacked_bar",
+		"name": "Percentage"
+	}
+]

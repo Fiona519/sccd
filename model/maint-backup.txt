@@ -1,0 +1,33 @@
+Customer Incident:  Component: XX-SER-SAPSMP-LAUNCH, XX-SER-SAPSMP-SUP, XX-SER-SAPSMP-USER
+•	2016: 
+o	Total: 12738
+o	Team 1: 93
+	Q1:  8
+	Q2: 26
+	Q3: 13
+	Q4: 46 
+
+•	2017: 
+o	Total: 8918
+o	Team 1: 67
+	Q1: 17
+	Q2: 16
+	Q3: 24
+	Q4: 10
+
+IT Direct:  category TMLOB_AGS_CRM_CI, IMFIT_DBS_INCIDENT_CUST , IMFIT_AGS_INCIDENT_CUST
+•	2016
+o	Total: 3364
+o	Team 1: 392
+	Q1: 72
+	Q2: 85
+	Q3: 127
+	Q4: 108
+	
+•	2017
+o	Total: 3120
+o	Team 1: 98
+	Q1: 60
+	Q2: 15
+	Q3: 8
+	Q4: 15

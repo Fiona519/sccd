@@ -1,0 +1,42 @@
+.sccd-customPopover { 
+	padding: 0.875rem 0.688rem 0.45rem 0.688rem;
+}
+.customPopover-header {
+    padding-bottom: 0.225rem;
+    padding-left: 0.988rem;
+    padding-right: 0.725rem;
+}
+.customPopover-header span{
+	font-weight:bold; 
+	font-size:0.875rem;
+    line-height: 1.2rem;
+}
+.customPopover-body {    
+	padding-left: 0.825rem;
+}
+.customPopover-body-codeline {
+    padding: 0.25rem 0.75rem 0.75rem 0.25rem;
+}
+.customPopover-body-codeline .float-left {
+	float: left;
+}
+.customPopover-body-codeline .text-align {
+	text-align: right;
+}
+.customPopover-body-codeline span {
+	font-weight: bold;
+	color: #5e696e;
+}
+.customPopover-body-coverage {
+    padding: 0.25rem 0.75rem 0.25rem 0.25rem;
+}
+.customPopover-body-coverage .float-left {
+	float: left;
+}
+.customPopover-body-coverage .text-align {
+	text-align: right;
+}
+.customPopover-body-coverage span {
+	font-weight: bold;
+	color: #5e696e;
+}

@@ -1,0 +1,32 @@
+<mvc:View controllerName="sap.support.sccd.controller.ITProjectDetail" 
+	xmlns="sap.suite.ui.commons"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+	xmlns:viz="sap.viz.ui5.controls">
+	<ChartContainer 
+		id="integrationTestDetailPage"
+		showFullScreen="true"
+		showPersonalization="false"
+		autoAdjustHeight="true"
+		showNavButton="true">
+		<toolbar>
+			<m:OverflowToolbar>
+				<m:Button type="Transparent" icon="sap-icon://nav-back" press="onBackPress"></m:Button>
+				<m:ToolbarSpacer/>
+				<m:Title id="sITProjectName"></m:Title>
+				<m:ToolbarSpacer/>
+				<ChartContainerToolbarPlaceholder></ChartContainerToolbarPlaceholder>
+			</m:OverflowToolbar>
+		</toolbar>
+		<content>
+			<ChartContainerContent>
+				<content>
+					<viz:Popover id="itDetailPopOver"></viz:Popover>
+					<viz:VizFrame id="itDetailVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+				</content>
+			</ChartContainerContent>
+		</content>
+	</ChartContainer>
+</mvc:View>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SAL CI/CD Dashboard Application</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		
+		<script 
+			id="sap-ui-bootstrap" 
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" 
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-libs="sap.m,sap.viz,sap.suite.ui.commons,sap.ui.layout"
+			dada-sap-ui-compatVersion="edge"
+			data-sap-ui-preload="async"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"sap.support.sccd": "./"}'>
+		</script>
+		
+		<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+		
+		<script>
+			sap.ui.getCore().attachInit(function () {
+				sap.ui.require([
+					"sap/ui/core/ComponentContainer"
+				], function (ComponentContainer) {
+					 new ComponentContainer({
+						height: "100%",
+						name: "sap.support.sccd"
+					}).placeAt("content");
+				});
+			});
+		</script>
+	</head>
+	
+	<body class="sapUiBody" id="content" role="application">
+		<div id="busyIndicator">Loading ...</div>
+	</body>
+</html>

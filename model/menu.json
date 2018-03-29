@@ -1,0 +1,18 @@
+[
+	{
+		"text": "Home",
+		"icon": "sap-icon://home"
+	},
+	{
+		"text": "Unit Test",
+		"icon": "sap-icon://badge"
+	},
+	{
+		"text": "Integration Test",
+		"icon": "sap-icon://machine"
+	},
+	{
+		"text": "Maintenance",
+		"icon": "sap-icon://cancel-maintenance"
+	}
+]

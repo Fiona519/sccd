@@ -1,0 +1,112 @@
+<mvc:View controllerName="sap.support.sccd.controller.Home" 
+	xmlns="sap.suite.ui.commons"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+	xmlns:layout="sap.ui.layout"
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:micro="sap.suite.ui.microchart"
+	height="100%">
+	<layout:FixFlex minFlexSize="250">
+		<layout:fixContent>
+			<m:HeaderContainer showDividers="true" class="sapUiTinyMarginTop">
+				<m:TileContent footer="{i18n>totalProject}">
+					<m:content>
+						<m:NumericContent value="{projectModel>/totalProject}" icon="sap-icon://sap-ui5"/>
+					</m:content>
+				</m:TileContent>
+
+				<m:TileContent unit="" footer="{i18n>top3Active}">
+					<m:content>
+						<micro:ComparisonMicroChart
+							isResponsive="true"
+							data="{topActive>/}">
+							<micro:data>
+								<micro:ComparisonMicroChartData  
+									title="{topActive>projectName}" 
+									value="{topActive>totalUT}" 
+									color="Good"/>
+							</micro:data>
+						</micro:ComparisonMicroChart>
+					</m:content>
+				</m:TileContent>
+
+				<m:TileContent footer="{i18n>healthyUTProject}">
+					<m:content>
+						<micro:DeltaMicroChart  
+							isResponsive="true"
+							title1="{i18n>totalProject}" 
+							title2="{i18n>healthyUT}" 
+							value1="{healthyUT>/totalUTProjects}" 
+							value2="{healthyUT>/healthyUTProjects}" 
+							displayValue1="{healthyUT>/totalUTProjects}" 
+							displayValue2="{healthyUT>/healthyUTProjects}" 
+							deltaDisplayValue="-{healthyUT>/unhealthyUTProjects}"  
+							color="Error"/>
+					</m:content>
+				</m:TileContent>
+
+				<m:TileContent footer="{i18n>healthyITProject}">
+					<m:content>
+						<micro:DeltaMicroChart 
+							isResponsive="true"
+							title1="{i18n>totalProject}" 
+							title2="{i18n>healthyIT}" 
+							value1="{healthyIT>/totalITProjects}" 
+							value2="{healthyIT>/healthyITProjects}" 
+							displayValue1="{healthyIT>/totalITProjects}" 
+							displayValue2="{healthyIT>/healthyITProjects}" 
+							deltaDisplayValue="-{healthyIT>/unhealthyITProjects}"  
+							color="Critical"/>
+					</m:content>
+				</m:TileContent>
+			</m:HeaderContainer>
+		</layout:fixContent>
+		<layout:flexContent>
+			<ChartContainer 
+				id="homePage"
+				showFullScreen="true"
+				showPersonalization="false"
+				autoAdjustHeight="true"
+				contentChange="onContentChange">
+				<toolbar>
+					<m:OverflowToolbar>
+						<m:Select id="vizTypeSelect" items="{path: 'vizType>/'}" change="onVizTypeChange">
+							<core:Item key="{vizType>typeId}" text="{vizType>name}"/>
+						</m:Select>
+						
+						<m:ToolbarSpacer/>
+						<ChartContainerToolbarPlaceholder></ChartContainerToolbarPlaceholder>
+					</m:OverflowToolbar>
+				</toolbar>	
+				<content>
+					<ChartContainerContent icon="sap-icon://horizontal-stacked-chart">
+						<content>
+							<viz:Popover id="homePopOver"></viz:Popover>
+							<viz:VizFrame id="homeVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+						</content>
+					</ChartContainerContent>
+					<ChartContainerContent icon="sap-icon://horizontal-combination-chart">
+						<content>
+							<viz:Popover id="homeAllPopOver"></viz:Popover>
+							<viz:VizFrame id="homeAllCoverVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+						</content>
+					</ChartContainerContent>
+					<ChartContainerContent icon="sap-icon://horizontal-bullet-chart">
+						<content>
+							<viz:Popover id="homeGoodPopOver"></viz:Popover>
+							<viz:VizFrame id="homeGoodVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+						</content>
+					</ChartContainerContent>
+					<ChartContainerContent icon="sap-icon://business-objects-experience">
+						<content>
+							<viz:Popover id="homeBadPopOver"></viz:Popover>
+							<viz:VizFrame id="homeBadVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+						</content>
+					</ChartContainerContent>
+				</content>
+			</ChartContainer>
+		</layout:flexContent>
+	</layout:FixFlex>
+</mvc:View>

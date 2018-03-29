@@ -1,0 +1,206 @@
+{
+	"_version": "1.4.0",
+	"sap.app": {
+		"id": "${project.artifactId}",
+		"type": "application",
+		"resources": "resources.json",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "${project.version}"
+		},
+		"ach": "ach",
+		"dataSources": {
+			"mainService": {
+				"uri": "/here/goes/your/serviceurl/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.fiori": {
+		"registrationIds": [ "F0000" ],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://detail-view",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belice"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.support.sccd.view.App",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "${sap.ui5.dist.version}",
+			"libs": {
+				"sap.ui.core": {
+					"minVersion": "1.38.0"
+				},
+				"sap.m": {
+					"minVersion": "1.38.0"
+				},
+				"sap.ushell": {
+					"minVersion": "1.38.0"
+				},
+				"sap.collaboration": {
+					"minVersion": "1.38",
+					"lazy": true
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.support.sccd.i18n.i18n"
+				}
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true
+			},
+			"menu": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/menu.json"
+			},
+			"vizType": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/vizFrameType.json"
+			},
+			"team": {
+				"type": "sap.ui.model.json.JSONModel"
+			},
+			"maint": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/maint-test.json"
+			},
+			"projectModel": {
+				"type": "sap.ui.model.json.JSONModel"
+			},
+			"topActive": {
+				"type": "sap.ui.model.json.JSONModel"
+			},
+			"healthyUT": {
+				"type": "sap.ui.model.json.JSONModel"				
+			},
+			"healthyIT": {
+				"type": "sap.ui.model.json.JSONModel"				
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.support.sccd.view",
+				"controlId": "app",
+				"controlAggregation": "detailPages",
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "master",
+					"target": ["master", "home"]
+				},
+				{
+					"pattern": "home",
+					"name": "home",
+					"target": ["master", "home"]
+				},
+				{
+					"pattern": "ut",
+					"name": "ut",
+					"target": ["master", "ut"]
+				},
+				{
+					"pattern": "project/{projectid}/ut",
+					"name": "utProjectDetail",
+					"target": ["master", "utProjectDetail"]
+				},
+				{
+					"pattern": "int",
+					"name": "int",
+					"target": ["master", "int"]
+				},
+				{
+					"pattern": "project/{projectid}/int",
+					"name": "itProjectDetail",
+					"target": ["master", "itProjectDetail"]
+				},
+				{
+					"pattern": "maint",
+					"name": "maint",
+					"target": ["master", "maint"]
+				}
+			],
+			"targets": {
+				"master": {
+					"viewName": "Master",
+					"viewLevel": 0,
+					"controlAggregation": "masterPages"
+				},
+				"home": {
+					"viewName": "Home",
+					"viewLevel": 0,
+					"controlAggregation": "detailPages"
+				},
+				"ut": {
+					"viewName": "UnitTest",
+					"viewLevel": 1,
+					"controlAggregation": "detailPages"
+				},
+				"int": {
+					"viewName": "IntegrationTest",
+					"viewLevel": 1,
+					"controlAggregation": "detailPages"
+				},
+				"maint": {
+					"viewName": "Maint",
+					"viewLevel": 1,
+					"controlAggregation": "detailPages"
+				},
+				"utProjectDetail": {
+					"viewName": "UTProjectDetail",
+					"viewLevel": 1,
+					"controlAggregation": "detailPages"
+				},
+				"itProjectDetail": {
+					"viewName": "ITProjectDetail",
+					"viewLevel": 1,
+					"controlAggregation": "detailPages"
+				}
+			}
+		}
+	}
+}

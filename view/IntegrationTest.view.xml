@@ -1,0 +1,28 @@
+<mvc:View controllerName="sap.support.sccd.controller.IntegrationTest" 
+	xmlns="sap.suite.ui.commons"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:m="sap.m"
+	xmlns:viz="sap.viz.ui5.controls">
+	<ChartContainer 
+		id="integrationTestPage"
+		showFullScreen="true"
+		showPersonalization="false"
+		autoAdjustHeight="true"
+		title="{i18n>integrationTestTitle}">		
+		<content>
+			<ChartContainerContent icon="sap-icon://horizontal-stacked-chart">
+				<content>
+					<viz:Popover id="itPopOver"></viz:Popover>
+					<viz:VizFrame id="itVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
+				</content>
+			</ChartContainerContent>
+			<ChartContainerContent icon="sap-icon://table-view">
+				<content>
+					<m:Table id="itTable"></m:Table>
+				</content>
+			</ChartContainerContent>
+		</content>
+	</ChartContainer>
+</mvc:View>
