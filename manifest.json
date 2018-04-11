@@ -98,7 +98,7 @@
 			},
 			"maint": {
 				"type": "sap.ui.model.json.JSONModel",
-				"uri": "model/maint-test.json"
+				"uri": "model/maint.json"
 			},
 			"projectModel": {
 				"type": "sap.ui.model.json.JSONModel"

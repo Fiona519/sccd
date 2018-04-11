@@ -93,6 +93,7 @@
 							<viz:VizFrame id="homeAllCoverVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
 						</content>
 					</ChartContainerContent>
+<!-- 
 					<ChartContainerContent icon="sap-icon://horizontal-bullet-chart">
 						<content>
 							<viz:Popover id="homeGoodPopOver"></viz:Popover>
@@ -105,6 +106,7 @@
 							<viz:VizFrame id="homeBadVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
 						</content>
 					</ChartContainerContent>
+					 -->
 				</content>
 			</ChartContainer>
 		</layout:flexContent>

@@ -20,7 +20,7 @@
 			</ChartContainerContent>
 			<ChartContainerContent icon="sap-icon://table-view">
 				<content>
-					<m:Table id="utTable"></m:Table>
+					<m:Table id="utTable" class="utTable"></m:Table>
 				</content>
 			</ChartContainerContent>
 		</content>
