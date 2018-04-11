@@ -1,1 +1,8 @@
-sap.ui.define(["sap/support/sccd/controller/BaseController"],function(r){"use strict";return r.extend("sap.support.sccd.controller.App",{})});
+sap.ui.define([
+	"sap/support/sccd/controller/BaseController"
+], function(BaseController){
+	
+	"use strict";
+
+	return BaseController.extend("sap.support.sccd.controller.App", {});
+});

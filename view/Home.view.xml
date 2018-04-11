@@ -87,7 +87,7 @@
 							<viz:VizFrame id="homeVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
 						</content>
 					</ChartContainerContent>
-					<ChartContainerContent icon="sap-icon://horizontal-combination-chart">
+					<ChartContainerContent icon="sap-icon://business-objects-experience">
 						<content>
 							<viz:Popover id="homeAllPopOver"></viz:Popover>
 							<viz:VizFrame id="homeAllCoverVizFrame" height="100%" width="100%" uiConfig="{applicationSet:'fiori'}"></viz:VizFrame>
